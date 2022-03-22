@@ -1,0 +1,24 @@
+<header>
+
+  <div class="navbar">
+    <div class="left-col">
+
+      <a class="logo" href="/">
+        aarol.dev
+      </a>
+      <div class="gradient"></div>
+    </div>
+
+    <nav>
+
+
+      {{ range .Site.Menus.main }}
+
+      <a href="{{ .URL }}">
+        {{ .Name }}
+      </a>
+
+      {{ end }}
+    </nav>
+  </div>
+</header>

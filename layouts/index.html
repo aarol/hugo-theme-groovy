@@ -1,0 +1,38 @@
+{{ define "main" }}
+
+<h1 class="title">Recent posts</h1>
+
+<ul>
+
+  {{ $pages := where .Site.RegularPages "Type" "posts" }}
+  {{ $paginator := .Paginate ($pages.GroupByDate "2006") }}
+
+  {{ range $paginator.PageGroups }}
+
+  <h1>
+    {{ (index .Pages 0).Date.Format "2006" }}
+  </h1>
+
+  <ul class="posts-list">
+    {{ range .Pages }}
+
+
+    <li class="posts-list-item">
+      <a href="{{.Permalink}}">
+        {{ .Title }}
+      </a>
+      <span>
+        {{ .Date.Format "Jan 2" }}
+      </span>
+    </li>
+
+    <hr>
+
+    {{ end }}
+  </ul>
+
+
+  {{ end }}
+</ul>
+
+{{ end }}
