@@ -9,16 +9,23 @@
       <div class="gradient"></div>
     </div>
 
+    <img id="mobile-cta" class="hamburger-menu" src="/menu.svg" alt="Open Navigation" />
+
     <nav>
 
+      
+      <ul class="primary-navigation">
 
-      {{ range .Site.Menus.main }}
-
-      <a href="{{ .URL }}">
-        {{ .Name }}
-      </a>
-
-      {{ end }}
+        <img id="mobile-exit" class="exit-menu" src="/exit.svg" alt="Close navigation" />
+        
+        {{ range .Site.Menus.main }}
+        <li>
+          <a href="{{ .URL }}">
+            {{ .Name }}
+          </a>
+        </li>
+        {{ end }}
+      </ul>
     </nav>
   </div>
 </header>
