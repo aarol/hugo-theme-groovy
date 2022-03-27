@@ -1,6 +1,5 @@
-
 body > header {
-  background-color:  #313131;
+  background-color: #313131;
 
   grid-column: 1 / -1;
 
@@ -39,17 +38,9 @@ body > header {
 
 .gradient {
   height: 7px;
-  // background: linear-gradient(
-  //   to right,
-  //   #fb4934 0% 20%, 
-  //   #b8bb26 20% 40%,
-  //   #fabd2f 40% 60%,
-  //   #83a598 60% 80%,
-  //   #d3869b 80% 100%
-  // );
   background: linear-gradient(
     to right,
-    #cc241d 0% 20%, 
+    #cc241d 0% 20%,
     #98971a 20% 40%,
     #d79921 40% 60%,
     #458588 60% 80%,
@@ -57,17 +48,57 @@ body > header {
   );
 }
 
-nav > a {
-  color: #fff;
-  font-size: 1.2rem;
-  text-decoration: none;
-  padding-left: 0.5em;
+.primary-navigation {
+  list-style: none;
+  display: flex;
+  margin: 0;
 
-  &:hover {
-    font-weight: bold;
+  a {
+    color: #fff;
+    font-size: 1.2rem;
+    text-decoration: none;
+    padding: 0 0.25em;
+
+    &:hover, &.active {
+      font-weight: bold;
+    }
+  }
+}
+
+.hamburger-menu,
+.exit-menu {
+  display: none;
+}
+
+.menu-btn {
+  .primary-navigation {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    inset: 0 0 0 40%;
+    background-color: #313131;
+    row-gap: 1em;
+    padding-top: 5em;
   }
 
-  &.active {
-    font-weight: bold;
+  .exit-menu {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+
+    padding: 2em;
+  }
+}
+  
+@media only screen and (max-width: 468px) {
+  .primary-navigation {
+    display: none;
+  }
+
+  .hamburger-menu {
+    margin-left: auto;
+    display: block;
+    color: #d79921;
   }
 }

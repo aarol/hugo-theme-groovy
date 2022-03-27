@@ -1,0 +1,29 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:ital@0;1&display=swap");
+@import "code.scss";
+@import "header.scss";
+@import "posts.scss";
+@import "main.scss";
+@import "syntax.scss";
+@import "projects.scss";
+@import "typography.scss";
+
+:root {
+  color-scheme: dark;
+  font-family: "Inter", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #1e1e1e;
+
+  display: grid;
+  grid-template-columns: 1fr calc(min(45rem, 90%)) 1fr;
+}
+
+body > * {
+  grid-column: 2;
+}

@@ -1,0 +1,28 @@
+.year-list {
+  padding: 0;
+}
+
+.posts-list {
+  list-style: none;
+
+  hr {
+    border-color: #666666;
+    margin: 1em 0;
+  }
+}
+
+.posts-list-item {
+  margin: 1em 0;
+  display: flex;
+  justify-content: space-between;
+
+  a {
+    color: #fabd2f;
+    text-decoration: none;
+  }
+
+  span {
+    margin-left: 0.5em;
+    white-space: nowrap;
+  }
+}
