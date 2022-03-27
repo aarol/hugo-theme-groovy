@@ -7,13 +7,21 @@
 
 <meta name="description" content="{{ $desc }}">
 
+{{/*  Google fonts  */}}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=JetBrains+Mono:ital@0;1&display=swap"
+  rel="stylesheet">
+
+{{/*  Hugo sass compiler  */}}
 {{ $sass := resources.Get "sass/style.scss" }}
 {{ $style := $sass | resources.ToCSS | resources.Minify | resources.Fingerprint }}
 <link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}">
 
+{{/*  Hugo esbuild javascript  */}}
 {{ $js := resources.Get "js/main.js" | js.Build "main.js" }}
-
 <script type="text/javascript" src="{{ $js.RelPermalink }}" defer></script>
+
 
 {{ $title := print .Site.Title " :: " .Title }}
 {{ if .IsHome }}{{ $title = .Site.Title }}{{ end }}
