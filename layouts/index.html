@@ -2,7 +2,7 @@
 
 <h1 class="title">Recent posts</h1>
 
-<ul>
+<ul class="year-list">
 
   {{ $pages := where .Site.RegularPages "Type" "posts" }}
   {{ $paginator := .Paginate ($pages.GroupByDate "2006") }}
