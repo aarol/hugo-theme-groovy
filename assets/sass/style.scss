@@ -21,7 +21,7 @@ body {
   background-color: #1e1e1e;
 
   display: grid;
-  grid-template-columns: 1fr calc(min(45rem, 90%)) 1fr;
+  grid-template-columns: 1fr calc(min(70ch, 90%)) 1fr;
 }
 
 body > * {

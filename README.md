@@ -42,6 +42,11 @@ title = '<title>'
   url = "/projects"
 ```
 
+Create a new post:
+```bash
+hugo new posts/my-first-post.md
+```
+
 If you plan on changing the theme, you can fork the repo on GitHub and then add your fork instead:
 
 ```bash

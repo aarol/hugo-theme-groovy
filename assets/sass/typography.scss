@@ -1,3 +1,12 @@
+p {
+  line-height: 1.5;
+  margin: initial auto;
+  
+}
+
+p > img {
+  max-width: 100%;
+}
 
 h1 {
   margin-top: 1em;
@@ -5,4 +14,11 @@ h1 {
 
 h2 {
   margin-top: 1.5em;
+}
+
+.katex-display {
+  padding: 1em 0;
+  transition: 100ms;
+  background-color: #313131;
+  border: 1px solid #606060;
 }
