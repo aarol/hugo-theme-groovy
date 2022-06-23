@@ -18,10 +18,6 @@
 {{ $style := $sass | resources.ToCSS | resources.Minify | resources.Fingerprint }}
 <link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}">
 
-{{/* Hugo esbuild javascript */}}
-{{ $js := resources.Get "js/main.js" | js.Build "main.js" }}
-<script type="text/javascript" src="{{ $js.RelPermalink }}" defer></script>
-
 {{/* Math */}}
 {{ if .Params.math }}
   {{ partial "katex.html" . }}

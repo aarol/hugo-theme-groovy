@@ -2,16 +2,15 @@
 
 <h1 class="title">Recent posts</h1>
 
-<ul class="year-list">
+<div class="year-list">
 
   {{ $pages := where .Site.RegularPages "Type" "posts" }}
   {{ $paginator := .Paginate ($pages.GroupByDate "2006") }}
 
   {{ range $paginator.PageGroups }}
-
-  <h1>
-    {{ (index .Pages 0).Date.Format "2006" }}
-  </h1>
+    <h1>
+      {{ (index .Pages 0).Date.Format "2006" }}
+    </h1>
 
   <ul class="posts-list">
     {{ range .Pages }}
@@ -21,17 +20,15 @@
         {{ .Title }}
       </a>
       <span>
-        {{ .Date.Format "Jan 2" }}
+        {{ .Date.Format "January 2" }}
       </span>
     </li>
-
-    <hr>
 
     {{ end }}
   </ul>
 
 
   {{ end }}
-</ul>
+</div>
 
 {{ end }}
