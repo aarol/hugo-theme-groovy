@@ -24,6 +24,6 @@ body {
   grid-template-columns: 1fr calc(min(70ch, 90%)) 1fr;
 }
 
-body > * {
+body>* {
   grid-column: 2;
 }

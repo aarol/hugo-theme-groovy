@@ -3,6 +3,27 @@
 }
 
 main {
+
+  h1,
+  h2,
+  h3 {
+    >a {
+      display: none;
+    }
+  }
+
+  h1,
+  h2,
+  h3 {
+    &:hover>a {
+      display: inline;
+
+      &:hover {
+        color: #fbcb5a;
+      }
+    }
+  }
+
   a {
     color: #fabd2f;
 
@@ -18,13 +39,13 @@ main {
   li {
     margin: 0.75em auto;
   }
-}
 
-blockquote {
-  color: #ebebeb;
-  border: 1px solid #4e4e4e;
-  background-color: #313131;
-  padding: 0.5rem 1rem;
-  margin-bottom: 3em;
-  margin-top: 3em;
+  blockquote {
+    color: #ebebeb;
+    border: 1px solid #4e4e4e;
+    background-color: #313131;
+    padding: 0.5rem 1rem;
+    margin-bottom: 3em;
+    margin-top: 3em;
+  }
 }
