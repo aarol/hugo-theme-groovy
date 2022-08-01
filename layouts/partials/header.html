@@ -1,29 +1,18 @@
 <header>
-
-  <div class="navbar">
+  <div class="header-content">
     <div class="left-col">
-
       <a class="logo" href="/">
         {{ .Site.Title }}
       </a>
       <div class="gradient"></div>
     </div>
 
-    <img id="mobile-cta" class="hamburger-menu" src="/menu.svg" alt="Open Navigation" />
-
     <nav>
-      <ul class="primary-navigation">
-
-        <img id="mobile-exit" class="exit-menu" src="/exit.svg" alt="Close navigation" />
-        
-        {{ range .Site.Menus.main }}
-        <li>
-          <a href="{{ .URL }}">
-            {{ .Name }}
-          </a>
-        </li>
-        {{ end }}
-      </ul>
+      {{ range .Site.Menus.main }}
+      <a href="{{ .URL }}">
+        {{ .Name }}
+      </a>
+      {{ end }}
     </nav>
   </div>
 </header>
