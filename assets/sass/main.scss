@@ -3,10 +3,13 @@
 }
 
 main {
+  max-width: calc(min(70ch, 90%));
+  margin-inline: auto;
 
   h1,
   h2,
-  h3 {
+  h3,
+  h4 { // hide anchors on h4
     >a {
       display: none;
     }
@@ -38,6 +41,10 @@ main {
 
   li {
     margin: 0.75em auto;
+  }
+
+  h3, h4 {
+    font-weight: 600;
   }
 
   blockquote {
