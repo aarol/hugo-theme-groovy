@@ -16,8 +16,10 @@ body>header {
 .left-col {
   display: flex;
   flex-direction: column;
-  padding-right: 1em;
-  grid-column: 2;
+
+  &:hover .gradient {
+    animation: gradient-scroll 0.5s;
+  }
 }
 
 .logo {
@@ -29,16 +31,6 @@ body>header {
   text-decoration: none;
 }
 
-.gradient {
-  height: 7px;
-  background: linear-gradient(to right,
-      #cc241d 0% 20%,
-      #98971a 20% 40%,
-      #d79921 40% 60%,
-      #458588 60% 80%,
-      #689d6a 80% 100%);
-}
-
 nav {
   a {
     color: #fff;
@@ -48,8 +40,81 @@ nav {
 
     &:hover,
     &.active {
-      font-weight: bold;
+      font-weight: 600;
     }
+  }
+}
+
+$color1: #cc241d;
+$color2: #d65d0e;
+$color3: #d79921;
+$color4: #98971a;
+$color5: #458588;
+
+.gradient {
+  height: 7px;
+
+  background-image: repeating-linear-gradient(to right,
+      $color1 0% 20%,
+      $color2 20% 40%,
+      $color3 40% 60%,
+      $color4 60% 80%,
+      $color5 80% 100%);
+}
+
+@keyframes gradient-scroll {
+  10% {
+    background-image: repeating-linear-gradient(to right,
+        $color1 0% 20%,
+        $color2 20% 40%,
+        $color3 40% 60%,
+        $color4 60% 80%,
+        $color5 80% 100%);
+  }
+
+  20% {
+    background-image: repeating-linear-gradient(to right,
+        $color5 0% 20%,
+        $color1 20% 40%,
+        $color2 40% 60%,
+        $color3 60% 80%,
+        $color4 80% 100%);
+  }
+
+  40% {
+    background-image: repeating-linear-gradient(to right,
+        $color4 0% 20%,
+        $color5 20% 40%,
+        $color1 40% 60%,
+        $color2 60% 80%,
+        $color3 80% 100%);
+  }
+
+  60% {
+    background-image: repeating-linear-gradient(to right,
+        $color3 0% 20%,
+        $color4 20% 40%,
+        $color5 40% 60%,
+        $color1 60% 80%,
+        $color2 80% 100%);
+  }
+
+  80% {
+    background-image: repeating-linear-gradient(to right,
+        $color2 0% 20%,
+        $color3 20% 40%,
+        $color4 40% 60%,
+        $color5 60% 80%,
+        $color1 80% 100%);
+  }
+
+  100% {
+    background-image: repeating-linear-gradient(to right,
+        $color1 0% 20%,
+        $color2 20% 40%,
+        $color3 40% 60%,
+        $color4 60% 80%,
+        $color5 80% 100%);
   }
 }
 
