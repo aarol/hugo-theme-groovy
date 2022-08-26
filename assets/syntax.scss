@@ -5,8 +5,14 @@ $commentColor: #ae9e8e;
 .chroma { background: #282828 }
 .chroma code { color: $baseColor; }
 
-.chroma .hl { background-color: #ffffcc18; }
+.chroma .hl { 
+  background-color: #ffffcc18; 
+  .c, .cp, .c1, .cs, .cm, .ch {
+    color:#d4bea8
+  }
+}
 .chroma .c { color: $commentColor; font-style: italic;  } /* Comment */
+
 .chroma .err { color: $baseColor; } /* Error */
 .chroma .esc { color: $baseColor;  } /* Escape */
 .chroma .g { color: $baseColor;  } /* Generic */
