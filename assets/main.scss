@@ -29,6 +29,7 @@ main {
 
   a {
     color: #fabd2f;
+    word-wrap: break-word;
 
     &:visited {
       color: #d79921;
@@ -53,5 +54,10 @@ main {
     background-color: #2a2a2a;
     padding: 0.5rem 1rem;
     margin: 3rem 2rem;
+
+    >blockquote {
+      margin: 0;
+      border-left: 3px solid #ad7d1b
+    }
   }
 }

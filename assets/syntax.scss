@@ -15,7 +15,7 @@ $commentColor: #ae9e8e;
 .chroma .n { color: $baseColor;  } /* Name */
 .chroma .o { color: #fe8019;  } /* Operator */
 .chroma .x { color: $baseColor;  } /* Other */
-.chroma .p { color: #bcaa7c;  } /* Punctuation */
+.chroma .p { color: $baseColor;  } /* Punctuation */
 .chroma .ch { color: $commentColor; font-style: italic;  } /* Comment.Hashbang */
 .chroma .cm { color: $commentColor; font-style: italic;  } /* Comment.Multiline */
 .chroma .cp { color: #8ec07c;  } /* Comment.Preproc */
