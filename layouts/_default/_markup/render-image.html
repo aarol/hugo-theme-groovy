@@ -8,7 +8,7 @@
   type="image/webp">
   <img
     src="{{.Destination | safeURL}}"
-    alt="{{ .PlainText }}"
+    alt="{{ .PlainText | safeHTML }}"
     width="{{ $image.Width }}"
     height="{{ $image.Height }}"
   >
