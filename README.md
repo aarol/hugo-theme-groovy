@@ -10,6 +10,8 @@ This theme requires hugo **extended** 0.80 or higher because it needs Hugo's bui
 
 ## Getting started
 
+You can clone this repository to test out the theme, but you should fork it instead if you want to make modifications.
+
 ```
 $ git submodule add https://github.com/aarol/hugo-theme-groovy.git themes/groovy
 ```
@@ -40,22 +42,27 @@ title = '<title>'
   identifier = "projects"
   name = "Projects"
   url = "/projects"
+
+
+[markup.goldmark]
+  [markup.goldmark.renderer]
+    # to enable markdown shortcodes in content (caption)
+    # enable only if content is trusted
+    unsafe = true
+    
 ```
 
 Create a new post:
 ```bash
 hugo new posts/my-first-post.md
 ```
+To insert images, create a directory /content/posts/{slug}, then rename {slug}.md to /content/posts/{slug}/index.md
 
-If you plan on changing the theme, you can fork the repo on GitHub and then add your fork instead:
-
-```bash
-$ git submodule add https://github.com/<username>/hugo-theme-groovy.git themes/groovy
-```
+Then adding images is as simple as copying them to the same directory and linking with the markdown image syntax.
 
 ## Features:
 
-- Syntax highlighting. To enable, copy this to your site's `config.toml`:
+- Syntax highlighting with the Gruvbox theme. To enable, copy this to your site's `config.toml`:
   ```toml
   [markup]
     [markup.highlight]
@@ -68,3 +75,5 @@ $ git submodule add https://github.com/<username>/hugo-theme-groovy.git themes/g
   ```yaml
   math: true
   ```
+- Images are automatically optimized to use webp when possible.
+- Caption shortcode to put text below images
