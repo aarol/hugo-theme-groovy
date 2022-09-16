@@ -1,0 +1,32 @@
+blockquote {
+  color: #f3f3f3;
+  border-left: 5px solid #d79921;
+  background-color: #2a2a2a;
+  padding: 0.5rem 1rem;
+  margin: 3rem 2rem;
+
+  p {
+    margin: 0.5em auto;
+  }
+
+  >blockquote {
+    margin: 0;
+    border-left: 3px solid #ad7d1b
+  }
+}
+
+figure {
+  margin-inline: 0;
+  >p {
+    margin-bottom: 0.5em;
+  }
+}
+
+figcaption {
+  margin-left: 1em;
+  color: #bdbdbd;
+}
+
+.error-message code {
+  color: #fb4934;
+}

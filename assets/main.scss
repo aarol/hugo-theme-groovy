@@ -1,5 +1,29 @@
+@import "code.scss";
+@import "header.scss";
+@import "footer.scss";
+@import "posts.scss";
+@import "syntax.scss";
+@import "projects-page.scss";
+@import "typography.scss";
+@import "shortcode.scss";
+
+:root {
+  color-scheme: dark;
+  font-family: "Inter", system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #1e1e1e;
+}
+
 .title {
   text-align: center;
+  margin-inline: auto;
 }
 
 main {
@@ -10,7 +34,7 @@ main {
   h2,
   h3,
   h4 { // hide anchors on h1-4
-    >:last-child {
+    >:last-child { // last child will be the anchor
       display: none;
     }
   }
@@ -36,44 +60,8 @@ main {
     }
   }
 
-  p {
-    word-wrap: break-word;
-  }
-
   li {
     margin: 0.75em auto;
   }
 
-  h3, h4 {
-    font-weight: 600;
-  }
-
-  blockquote {
-    color: #f3f3f3;
-    border-left: 5px solid #d79921;
-    background-color: #2a2a2a;
-    padding: 0.5rem 1rem;
-    margin: 3rem 2rem;
-
-    p {
-      margin: 0.5em auto;
-    }
-
-    >blockquote {
-      margin: 0;
-      border-left: 3px solid #ad7d1b
-    }
-  }
-
-  figure {
-    margin-inline: 0;
-    >p {
-      margin-bottom: 0.5em;
-    }
-  }
-
-  figcaption {
-    margin-left: 1em;
-    color: #bdbdbd;
-  }
 }
