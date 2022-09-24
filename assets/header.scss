@@ -18,7 +18,7 @@ body>header {
   flex-direction: column;
 
   &:hover .gradient {
-    animation: gradient-scroll 0.5s;
+    animation: gradient-scroll 0.8s;
   }
 }
 
@@ -60,7 +60,7 @@ nav {
     font-variation-settings: 'wght' 600;
     transition: font-variation-settings 0.2s ease;
 
-    &:hover{
+    &:hover {
       font-variation-settings: "wght" 700;
     }
   }

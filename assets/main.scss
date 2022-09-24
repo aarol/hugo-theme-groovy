@@ -74,7 +74,14 @@ main {
     transition: font-variation-settings 0.2s ease;
 
     &:hover {
-      font-variation-settings: "wght" 500;
+      font-variation-settings: "wght" 550;
     }
+  }
+}
+
+@media(prefers-reduced-motion) {
+  * {
+    transition-duration: 0s !important;
+    animation-duration: 0s !important;
   }
 }
