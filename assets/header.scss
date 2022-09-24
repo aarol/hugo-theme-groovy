@@ -45,6 +45,27 @@ nav {
   }
 }
 
+@supports(font-variation-settings: normal) {
+  nav a {
+    font-variation-settings: 'wght' 400;
+    transition: font-variation-settings 0.2s ease;
+
+    &:hover,
+    &.active {
+      font-variation-settings: "wght" 600;
+    }
+  }
+
+  .logo {
+    font-variation-settings: 'wght' 600;
+    transition: font-variation-settings 0.2s ease;
+
+    &:hover{
+      font-variation-settings: "wght" 700;
+    }
+  }
+}
+
 $color1: #cc241d;
 $color2: #d65d0e;
 $color3: #d79921;

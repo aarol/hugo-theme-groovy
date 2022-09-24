@@ -33,8 +33,11 @@ main {
   h1,
   h2,
   h3,
-  h4 { // hide anchors on h1-4
-    >:last-child { // last child will be the anchor
+  h4 {
+
+    // hide anchors on h1-h4
+    >:last-child {
+      // last child will be the anchor
       display: none;
     }
   }
@@ -51,6 +54,10 @@ main {
     }
   }
 
+  li {
+    margin: 0.75em auto;
+  }
+
   a {
     color: #fabd2f;
     word-wrap: break-word;
@@ -59,9 +66,15 @@ main {
       color: #d79921;
     }
   }
+}
 
-  li {
-    margin: 0.75em auto;
+@supports(font-variation-settings: normal) {
+  main a {
+    font-variation-settings: 'wght' 400;
+    transition: font-variation-settings 0.2s ease;
+
+    &:hover {
+      font-variation-settings: "wght" 500;
+    }
   }
-
 }
