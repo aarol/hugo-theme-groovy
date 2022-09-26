@@ -1,6 +1,6 @@
 .project-item {
 
-  padding: 1em;
+  padding: 1em 1em;
 
   h1 {
     margin: 0.5em 0;
@@ -10,9 +10,36 @@
     margin: 0;
   }
 
-  a, a:visited {
+  img {
+    max-height: 300px;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  a,
+  a:visited {
     color: #fabd2f;
   }
 
-  border: 2px dotted #423e34;
+  background-color: #282828;
+  // border: 2px solid #5d584b;
+  margin-bottom: 2em;
+}
+
+.project-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .gh-logo {
+    width: 30px;
+    height: 30px;
+    color: white;
+    transition: transform 0.25s ease;
+    margin: 1em;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
 }
