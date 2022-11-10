@@ -1,16 +1,11 @@
-body>header {
-  background-color: #313131;
-
-  padding-top: 0.7em;
-  border-bottom: 1px solid #606060;
-}
-
-.header-content {
+header {
+  padding-top: 1em;
+  padding-bottom: 1em;
   margin-inline: auto;
   max-width: calc(min(70ch, 90%));
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
+  align-items: center;
 }
 
 .left-col {
@@ -140,12 +135,14 @@ $color5: #458588;
 }
 
 @media only screen and (max-width: 430px) {
-  .header-content {
+  header {
     flex-direction: column;
   }
 
   nav {
-    border-top: 1px solid #5d5d5d;
+    margin-top: 10px;
+    border-top: 3px solid #2a2a2a;
+    border-bottom: 3px solid #2a2a2a;
     display: flex;
     width: 100%;
     justify-content: space-around;
