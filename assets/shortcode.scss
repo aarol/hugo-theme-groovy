@@ -15,8 +15,28 @@ blockquote {
   }
 }
 
+kbd {
+  background-color: #3b3b3b;
+  border: 1px solid #3b3b3b;
+  border-radius: 4px;
+  padding: 3px 6px;
+  font-weight: 500;
+  font-size: 0.8em;
+  font-family: "Jetbrains Mono", monospace;
+  box-shadow: 2px 2px #2a2a2a;
+  transition: transform 250ms, box-shadow 250ms;
+  display: inline-block;
+  cursor: default;
+  
+  &:hover {
+    box-shadow: 0px 0px #2a2a2a;
+    transform: translateY(2px);
+  }
+}
+
 figure {
   margin-inline: 0;
+
   >p {
     margin-bottom: 0.5em;
   }
