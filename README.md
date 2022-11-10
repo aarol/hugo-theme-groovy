@@ -41,15 +41,7 @@ title = '<title>'
 [[menu.main]]
   identifier = "projects"
   name = "Projects"
-  url = "/projects"
-
-
-[markup.goldmark]
-  [markup.goldmark.renderer]
-    # to enable markdown shortcodes in content (caption)
-    # enable only if content is trusted
-    unsafe = true
-    
+  url = "/projects"    
 ```
 
 Create a new post:
