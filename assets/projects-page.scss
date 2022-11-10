@@ -4,10 +4,17 @@
 
   h1 {
     margin: 0.5em 0;
+    color: #ffb813;
+
   }
 
   p {
     margin: 0;
+    color: white;
+  }
+
+  a {
+    text-decoration: none;
   }
 
   img {
@@ -16,14 +23,10 @@
     object-fit: cover;
   }
 
-  a,
-  a:visited {
-    color: #fabd2f;
-  }
-
-  background-color: #282828;
-  // border: 2px solid #5d584b;
+  background-color: #262626;
   margin-bottom: 2em;
+
+  box-shadow: 3px 3px 2px 1px rgb(22, 22, 22);
 }
 
 .project-info {

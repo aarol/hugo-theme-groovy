@@ -7,9 +7,13 @@
 @import "typography.scss";
 @import "shortcode.scss";
 
+
 :root {
   color-scheme: dark;
   font-family: "Inter", system-ui, sans-serif;
+
+  --accent: #fabd2f;
+  --accent-darker: #c79520;
 }
 
 * {
@@ -30,14 +34,14 @@ main {
   max-width: calc(min(70ch, 90%));
   margin-inline: auto;
 
+  // hide anchors on h1-h4
   h1,
   h2,
   h3,
   h4 {
 
-    // hide anchors on h1-h4
+    // last child will be the anchor
     >:last-child {
-      // last child will be the anchor
       display: none;
     }
   }
@@ -47,10 +51,6 @@ main {
   h3 {
     &:hover>a {
       display: inline;
-
-      &:hover {
-        color: #fbcb5a;
-      }
     }
   }
 
@@ -59,11 +59,11 @@ main {
   }
 
   a {
-    color: #fabd2f;
+    color: var(--accent);
     word-wrap: break-word;
 
     &:visited {
-      color: #d79921;
+      color: var(--accent-darker);
     }
   }
 }

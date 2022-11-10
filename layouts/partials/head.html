@@ -8,9 +8,9 @@
 <meta name="description" content="{{ $desc }}">
 
 {{/* Hugo sass compiler */}}
-{{ $sass := resources.Get "main.scss" }}
-{{ $style := $sass | resources.ToCSS | resources.Minify | resources.Fingerprint }}
-<link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}">
+{{ $sass := resources.Get "style.scss" }}
+{{ $style := $sass | resources.ToCSS }}
+<link rel="stylesheet" href="{{ $style.Permalink }}">
 
 {{/* Math */}}
 {{ if .Params.math }}

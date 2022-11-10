@@ -1,5 +1,6 @@
 $baseColor: #eeebe2;
 $commentColor: #ae9e8e;
+$accent: #fabd2f;
 
 /* taken from https://github.com/uraimo/pygments-vimstyles/blob/master/gruvbox.css */
 .chroma { background: #282828 }
@@ -42,18 +43,18 @@ $commentColor: #ae9e8e;
 .chroma .kn { color: #fe8019;  } /* Keyword.Namespace */
 .chroma .kp { color: #fe8019;  } /* Keyword.Pseudo */
 .chroma .kr { color: #fe8019;  } /* Keyword.Reserved */
-.chroma .kt { color: #fabd2f;  } /* Keyword.Type */
+.chroma .kt { color: $accent;  } /* Keyword.Type */
 .chroma .ld { color: $baseColor;  } /* Literal.Date */
 .chroma .m { color: #d3869b;  } /* Literal.Number */
 .chroma .s { color: #b8bb26;  } /* Literal.String */
 .chroma .na { color: #b8bb26; font-weight: bold;  } /* Name.Attribute */
-.chroma .nb { color: #fabd2f;  } /* Name.Builtin */
+.chroma .nb { color: $accent;  } /* Name.Builtin */
 .chroma .nc { color: $baseColor;  } /* Name.Class */
 .chroma .no { color: #d3869b;  } /* Name.Constant */
 .chroma .nd { color: $baseColor;  } /* Name.Decorator */
-.chroma .ni { color: #fabd2f;  } /* Name.Entity */
+.chroma .ni { color: $accent;  } /* Name.Entity */
 .chroma .ne { color: #fb4934;  } /* Name.Exception */
-.chroma .nf { color: #fabd2f;  } /* Name.Function */
+.chroma .nf { color: $accent;  } /* Name.Function */
 .chroma .nl { color: #ffb157;  } /* Name.Label */
 .chroma .nn { color: $baseColor;  } /* Name.Namespace */
 .chroma .nx { color: $baseColor;  } /* Name.Other */
@@ -78,7 +79,7 @@ $commentColor: #ae9e8e;
 .chroma .sr { color: #b8bb26;  } /* Literal.String.Regex */
 .chroma .s1 { color: #b8bb26;  } /* Literal.String.Single */
 .chroma .ss { color: #83a598;  } /* Literal.String.Symbol */
-.chroma .bp { color: #fabd2f;  } /* Name.Builtin.Pseudo */
+.chroma .bp { color: $accent;  } /* Name.Builtin.Pseudo */
 .chroma .vc { color: $baseColor;  } /* Name.Variable.Class */
 .chroma .vg { color: $baseColor;  } /* Name.Variable.Global */
 .chroma .vi { color: $baseColor;  } /* Name.Variable.Instance */
