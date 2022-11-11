@@ -1,16 +1,14 @@
 <header>
-    <div class="left-col">
-      <a class="logo" href="/">
-        {{ .Site.Title }}
-      </a>
-      <div class="gradient"></div>
-    </div>
+  <a class="logo" href="/">
+    {{ .Site.Title }}
+    <div class="gradient"></div>
+  </a>
 
-    <nav>
-      {{ range .Site.Menus.main }}
-      <a href="{{ .URL }}">
-        {{ .Name }}
-      </a>
-      {{ end }}
-    </nav>
+  <nav>
+    {{ range .Site.Menus.main }}
+    <a href="{{ .URL }}">
+      {{ .Name }}
+    </a>
+    {{ end }}
+  </nav>
 </header>

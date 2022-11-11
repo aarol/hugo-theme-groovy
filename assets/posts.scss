@@ -1,5 +1,8 @@
 .year-list {
   padding: 0;
+  >h1 {
+    font-size: 1.8em;
+  }
 }
 
 .posts-list {
@@ -22,5 +25,4 @@
     margin-left: 0.5em;
     white-space: nowrap;
   }
-
 }

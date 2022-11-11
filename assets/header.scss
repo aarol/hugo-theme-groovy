@@ -8,22 +8,22 @@ header {
   align-items: center;
 }
 
-.left-col {
+.logo {
   display: flex;
   flex-direction: column;
-
-  &:hover .gradient {
-    animation: gradient-scroll 0.8s;
-  }
-}
-
-.logo {
-  padding-right: 0.8em;
-  padding-bottom: 0.2em;
+  padding: 0.4em;
   color: #fff;
   font-weight: 600;
   font-size: 1.5rem;
   text-decoration: none;
+  border-radius: 10px;
+
+  &:hover {
+    background-color: #2a2a2ac1;
+    .gradient {
+      animation: gradient-scroll 0.8s;
+    }
+  }
 }
 
 nav {
@@ -32,10 +32,11 @@ nav {
     font-size: 1.2rem;
     text-decoration: none;
     padding: 0.4em;
+    border-radius: 10px;
 
-    &:hover,
-    &.active {
-      font-weight: 600;
+    &:hover {
+      background-color: #2a2a2ac1;
+      font-weight: 700;
     }
   }
 }
@@ -61,79 +62,6 @@ nav {
   }
 }
 
-$color1: #cc241d;
-$color2: #d65d0e;
-$color3: #d79921;
-$color4: #98971a;
-$color5: #458588;
-
-.gradient {
-  height: 7px;
-
-  background-image: repeating-linear-gradient(to right,
-      $color1 0% 20%,
-      $color2 20% 40%,
-      $color3 40% 60%,
-      $color4 60% 80%,
-      $color5 80% 100%);
-}
-
-@keyframes gradient-scroll {
-  10% {
-    background-image: repeating-linear-gradient(to right,
-        $color1 0% 20%,
-        $color2 20% 40%,
-        $color3 40% 60%,
-        $color4 60% 80%,
-        $color5 80% 100%);
-  }
-
-  20% {
-    background-image: repeating-linear-gradient(to right,
-        $color5 0% 20%,
-        $color1 20% 40%,
-        $color2 40% 60%,
-        $color3 60% 80%,
-        $color4 80% 100%);
-  }
-
-  40% {
-    background-image: repeating-linear-gradient(to right,
-        $color4 0% 20%,
-        $color5 20% 40%,
-        $color1 40% 60%,
-        $color2 60% 80%,
-        $color3 80% 100%);
-  }
-
-  60% {
-    background-image: repeating-linear-gradient(to right,
-        $color3 0% 20%,
-        $color4 20% 40%,
-        $color5 40% 60%,
-        $color1 60% 80%,
-        $color2 80% 100%);
-  }
-
-  80% {
-    background-image: repeating-linear-gradient(to right,
-        $color2 0% 20%,
-        $color3 20% 40%,
-        $color4 40% 60%,
-        $color5 60% 80%,
-        $color1 80% 100%);
-  }
-
-  100% {
-    background-image: repeating-linear-gradient(to right,
-        $color1 0% 20%,
-        $color2 20% 40%,
-        $color3 40% 60%,
-        $color4 60% 80%,
-        $color5 80% 100%);
-  }
-}
-
 @media only screen and (max-width: 430px) {
   header {
     flex-direction: column;
@@ -150,5 +78,78 @@ $color5: #458588;
     >a {
       padding: 1rem;
     }
+  }
+}
+
+$color1: #cc241d;
+$color2: #d65d0e;
+$color3: #d79921;
+$color4: #98971a;
+$color5: #458588;
+
+.gradient {
+  height: 7px;
+
+  background-image: linear-gradient(to right,
+      $color1 0% 20%,
+      $color2 20% 40%,
+      $color3 40% 60%,
+      $color4 60% 80%,
+      $color5 80% 100%);
+}
+
+@keyframes gradient-scroll {
+  10% {
+    background-image: linear-gradient(to right,
+        $color1 0% 20%,
+        $color2 20% 40%,
+        $color3 40% 60%,
+        $color4 60% 80%,
+        $color5 80% 100%);
+  }
+
+  20% {
+    background-image: linear-gradient(to right,
+        $color5 0% 20%,
+        $color1 20% 40%,
+        $color2 40% 60%,
+        $color3 60% 80%,
+        $color4 80% 100%);
+  }
+
+  40% {
+    background-image: linear-gradient(to right,
+        $color4 0% 20%,
+        $color5 20% 40%,
+        $color1 40% 60%,
+        $color2 60% 80%,
+        $color3 80% 100%);
+  }
+
+  60% {
+    background-image: linear-gradient(to right,
+        $color3 0% 20%,
+        $color4 20% 40%,
+        $color5 40% 60%,
+        $color1 60% 80%,
+        $color2 80% 100%);
+  }
+
+  80% {
+    background-image: linear-gradient(to right,
+        $color2 0% 20%,
+        $color3 20% 40%,
+        $color4 40% 60%,
+        $color5 60% 80%,
+        $color1 80% 100%);
+  }
+
+  100% {
+    background-image: linear-gradient(to right,
+        $color1 0% 20%,
+        $color2 20% 40%,
+        $color3 40% 60%,
+        $color4 60% 80%,
+        $color5 80% 100%);
   }
 }

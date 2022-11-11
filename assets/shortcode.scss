@@ -1,7 +1,20 @@
+img, svg {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.katex-display {
+  padding: 1em 0;
+  background-color: #252525;
+  border-radius: 10px;
+}
+
 blockquote {
   color: #f3f3f3;
   border-left: 5px solid #d79921;
   background-color: #2a2a2a;
+  border-radius: 0 10px 10px 0;
   padding: 0.5rem 1rem;
   margin: 3rem 2rem;
 
@@ -20,6 +33,7 @@ kbd {
   border: 1px solid #3b3b3b;
   border-radius: 4px;
   padding: 3px 6px;
+  margin-bottom: 0.4em;
   font-weight: 500;
   font-size: 0.8em;
   font-family: "Jetbrains Mono", monospace;
