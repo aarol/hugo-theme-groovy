@@ -2,11 +2,11 @@
 
 ### Dark theme inspired by the Gruvbox color scheme
 
-### [PREVIEW](https://aarol.dev)
+### PREVIEW: <https://aarol.dev>
 
 The theme is made to be simple and can be extended easily without unnecessary build steps.
 
-This theme requires hugo **extended** 0.80 or higher because it needs Hugo's built in sass compilation.
+This theme requires hugo **extended** 0.80 or higher because it needs Hugo's built in sass compilation and Webp encoding.
 
 ## Getting started
 
@@ -48,7 +48,7 @@ Create a new post:
 ```bash
 hugo new posts/my-first-post.md
 ```
-To insert images, create a directory /content/posts/{slug}, then rename {slug}.md to /content/posts/{slug}/index.md
+To insert images, create a directory /content/posts/{slug}, then rename /content/posts/{slug}.md to /content/posts/{slug}/index.md
 
 Then adding images is as simple as copying them to the same directory and linking with the markdown image syntax.
 
