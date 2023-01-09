@@ -12,7 +12,7 @@ $accent: #fabd2f;
     color:#d4bea8
   }
 }
-.chroma .c { color: $commentColor; font-style: italic;  } /* Comment */
+.chroma .c { color: $commentColor; font-style: normal;  } /* Comment */
 
 .chroma .err { color: $baseColor; } /* Error */
 .chroma .esc { color: $baseColor;  } /* Escape */
@@ -23,11 +23,11 @@ $accent: #fabd2f;
 .chroma .o { color: #fe8019;  } /* Operator */
 .chroma .x { color: $baseColor;  } /* Other */
 .chroma .p { color: $baseColor;  } /* Punctuation */
-.chroma .ch { color: $commentColor; font-style: italic;  } /* Comment.Hashbang */
-.chroma .cm { color: $commentColor; font-style: italic;  } /* Comment.Multiline */
+.chroma .ch { color: $commentColor; font-style: normal;  } /* Comment.Hashbang */
+.chroma .cm { color: $commentColor; font-style: normal;  } /* Comment.Multiline */
 .chroma .cp { color: #8ec07c;  } /* Comment.Preproc */
-.chroma .c1 { color: $commentColor; font-style: italic;  } /* Comment.Single */
-.chroma .cs { color: $commentColor; font-style: italic;  } /* Comment.Special */
+.chroma .c1 { color: $commentColor; font-style: normal;  } /* Comment.Single */
+.chroma .cs { color: $commentColor; font-style: normal;  } /* Comment.Special */
 .chroma .gd { color: #282828; background-color: #fb4934 } /* Generic.Deleted */
 .chroma .ge { color: #83a598; text-decoration: underline;  } /* Generic.Emph */
 .chroma .gr { color: $baseColor; font-weight: bold; background-color: #fb4934 } /* Generic.Error */
