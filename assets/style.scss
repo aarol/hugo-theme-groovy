@@ -7,13 +7,29 @@
 @import "typography.scss";
 @import "shortcode.scss";
 
-
 :root {
-  color-scheme: dark;
+  color-scheme: light dark;
   font-family: "Inter", system-ui, sans-serif;
 
   --accent: #fabd2f;
   --accent-darker: #d4a027;
+
+  --background: #1e1e1e;
+  --hover-background: #2a2a2ac1;
+  --card: #2a2a2a;
+  --shadow: #1b1b1b 1px 1px 5px;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --background: white;
+    --hover-background: #e9e8e5;
+    --card: #fafafa;
+
+    --accent: #076678;
+    --accent-darker: #458588;
+    --shadow: #e7e7e7 1px 1px 5px inset;
+  }
 }
 
 * {
@@ -22,8 +38,7 @@
 
 body {
   margin: 0;
-  background-color: #1e1e1e;
-  color: white;
+  background-color: var(--background);
 }
 
 .title {

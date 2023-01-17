@@ -12,14 +12,14 @@ header {
   display: flex;
   flex-direction: column;
   padding: 0.4em;
-  color: #fff;
+  color: inherit;
   font-weight: 600;
   font-size: 1.5rem;
   text-decoration: none;
   border-radius: 10px;
 
   &:hover {
-    background-color: #2a2a2ac1;
+    background-color: var(--hover-background);
     .gradient {
       animation: gradient-scroll 0.8s;
     }
@@ -28,14 +28,14 @@ header {
 
 nav {
   a {
-    color: #fff;
+    color: inherit;
     font-size: 1.2rem;
     text-decoration: none;
     padding: 0.4em;
     border-radius: 10px;
 
     &:hover {
-      background-color: #2a2a2ac1;
+      background-color: var(--hover-background);
       font-weight: 700;
     }
   }

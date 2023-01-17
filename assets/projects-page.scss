@@ -4,13 +4,12 @@
 
   h1 {
     margin: 0.5em 0;
-    color: #ffb813;
+    color: var(--accent);
 
   }
 
   p {
     margin: 0;
-    color: white;
   }
 
   a {
@@ -23,10 +22,10 @@
     object-fit: cover;
   }
 
-  background-color: #262626;
+  background-color: var(--card);
   margin-bottom: 2em;
 
-  box-shadow: 3px 3px 2px 1px rgb(22, 22, 22);
+  box-shadow: var(--shadow) 3px 3px 2px 1px;
 }
 
 .project-info {
@@ -37,8 +36,8 @@
   .gh-logo {
     width: 30px;
     height: 30px;
-    color: white;
-    transition: transform 0.25s ease;
+    color: initial;
+    transition: transform 0.25s ease-in-out;
     margin: 1em;
 
     &:hover {
