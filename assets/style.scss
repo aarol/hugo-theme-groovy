@@ -67,6 +67,11 @@ main {
       color: var(--accent-darker);
     }
   }
+
+  .date {
+    text-align: end;
+    color: #aeaeae;
+  }
 }
 
 @supports(font-variation-settings: normal) {

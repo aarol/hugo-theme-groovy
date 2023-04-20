@@ -2,6 +2,7 @@ img, svg {
   max-width: 100%;
   height: auto;
   border-radius: 10px;
+  image-rendering: crisp-edges;
 }
 
 .katex-display {

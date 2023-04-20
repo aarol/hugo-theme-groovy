@@ -33,7 +33,7 @@ $accent: #fabd2f;
 .chroma .gr { color: $baseColor; font-weight: bold; background-color: #fb4934 } /* Generic.Error */
 .chroma .gh { color: #b8bb26; font-weight: bold;  } /* Generic.Heading */
 .chroma .gi { color: #282828; background-color: #b8bb26 } /* Generic.Inserted */
-.chroma .go { color: #504945;  } /* Generic.Output */
+.chroma .go { color: $commentColor;  } /* Generic.Output */
 .chroma .gp { color: $baseColor;  } /* Generic.Prompt */
 .chroma .gs { color: $baseColor;  } /* Generic.Strong */
 .chroma .gu { color: #b8bb26; font-weight: bold;  } /* Generic.Subheading */
@@ -60,7 +60,7 @@ $accent: #fabd2f;
 .chroma .nx { color: $baseColor;  } /* Name.Other */
 .chroma .py { color: $baseColor;  } /* Name.Property */
 .chroma .nt { color: #fb4934;  } /* Name.Tag */
-.chroma .nv { color: $baseColor;  } /* Name.Variable */
+.chroma .nv { color: #fe8019;  } /* Name.Variable */
 .chroma .ow { color: #fe8019;  } /* Operator.Word */
 .chroma .w { color: $baseColor;  } /* Text.Whitespace */
 .chroma .mb { color: #d3869b;  } /* Literal.Number.Bin */
