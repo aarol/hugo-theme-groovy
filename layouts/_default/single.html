@@ -1,22 +1,6 @@
 {{ define "main" }}
-
 <main>
   <h1 class="title">{{ .Title }}</h1>
   {{ .Content }}
-
-  {{ $date := .Date.Format "02.01.2006" }}
-  <p class="date">
-    Published on {{ $date }}
-  </p>
-
-  {{ with .Page.Lastmod }}
-  {{ $lastMod := .Format "02.01.2006" }}
-  {{ if ne $date $lastMod }}
-  <p class="date">
-    Edited on {{ $lastMod }}
-  </p>
-  {{ end }}
-  {{ end }}
 </main>
-
 {{ end }}
