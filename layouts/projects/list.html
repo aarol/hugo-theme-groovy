@@ -2,11 +2,7 @@
 <main>
   <h1 class="title">{{ .Title }}</h1>
 
-  {{ $pages := where .Site.RegularPages "Type" "projects" }}
-
-  {{ $paginator := .Paginate $pages }}
-
-  {{ range $paginator.Pages }}
+  {{ range (where .Site.RegularPages "Type" "projects") }}
 
   {{ $description := .Content }}
 

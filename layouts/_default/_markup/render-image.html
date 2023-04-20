@@ -16,7 +16,7 @@
 
 {{/*  PNG/JPEG  */}}
 {{ else }}
-{{ $webp := $image.Resize (printf "%vx%v webp q90" $image.Width $image.Height) }}
+{{ $webp := $image.Resize (printf "%vx%v webp text q90" $image.Width $image.Height) }}
 <picture>
   <source srcset="{{$webp.RelPermalink}}" type="image/webp">
   <img src="{{.Destination | safeURL}}" alt="{{ .PlainText | safeHTML }}" width="{{ $image.Width }}"

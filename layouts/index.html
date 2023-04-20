@@ -6,12 +6,10 @@
   <div class="year-list">
 
     {{ $pages := where .Site.RegularPages "Type" "posts" }}
-    {{ $paginator := .Paginate ($pages.GroupByDate "2006") }}
 
-    {{ range $paginator.PageGroups }}
-    <h1>
-      {{ (index .Pages 0).Date.Format "2006" }}
-    </h1>
+    {{ range $pages.GroupByDate "2006" }}
+
+    <h1>{{ .Key }}</h1>
 
     <ul class="posts-list">
       {{ range .Pages }}
