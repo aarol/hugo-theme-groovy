@@ -9,7 +9,7 @@
 
 {{/* Hugo sass compiler */}}
 {{ $sass := resources.Get "style.scss" }}
-{{ $style := $sass | resources.ToCSS }}
+{{ $style := $sass | resources.ToCSS | resources.Fingerprint }}
 <link rel="stylesheet" href="{{ $style.Permalink }}">
 
 {{/* Math */}}

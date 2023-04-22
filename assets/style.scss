@@ -10,7 +10,7 @@
 
 :root {
   color-scheme: dark;
-  font-family: "Inter", system-ui, sans-serif;
+  font-family: "Inter", "Inter-fallback", system-ui, sans-serif;
 
   --accent: #fabd2f;
   --accent-darker: #d4a027;
