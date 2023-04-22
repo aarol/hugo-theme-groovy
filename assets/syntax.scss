@@ -1,4 +1,4 @@
-$baseColor: #eeebe2;
+$baseColor: #d8d8d8;
 $commentColor: #ae9e8e;
 $accent: #fabd2f;
 
@@ -33,7 +33,7 @@ $accent: #fabd2f;
 .chroma .gr { color: $baseColor; font-weight: bold; background-color: #fb4934 } /* Generic.Error */
 .chroma .gh { color: #b8bb26; font-weight: bold;  } /* Generic.Heading */
 .chroma .gi { color: #282828; background-color: #b8bb26 } /* Generic.Inserted */
-.chroma .go { color: $commentColor;  } /* Generic.Output */
+.chroma .go { color: #a9a9a9;  } /* Generic.Output */
 .chroma .gp { color: $baseColor;  } /* Generic.Prompt */
 .chroma .gs { color: $baseColor;  } /* Generic.Strong */
 .chroma .gu { color: #b8bb26; font-weight: bold;  } /* Generic.Subheading */

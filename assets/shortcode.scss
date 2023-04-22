@@ -2,7 +2,6 @@ img, svg {
   max-width: 100%;
   height: auto;
   border-radius: 10px;
-  image-rendering: crisp-edges;
 }
 
 .katex-display {
@@ -12,7 +11,6 @@ img, svg {
 }
 
 blockquote {
-  color: #f3f3f3;
   border-left: 5px solid #d79921;
   background-color: #2a2a2a;
   border-radius: 0 10px 10px 0;
