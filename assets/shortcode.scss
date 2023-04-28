@@ -63,3 +63,24 @@ figcaption {
 .error-message code {
   color: #fb4934;
 }
+
+.align-left {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.download {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: #252525;
+  padding: 1em;
+  border-radius: 20px;
+  text-decoration: none;
+
+  svg {
+    margin-right: 0.5em;
+    width: 32px;
+    color: white;
+  }
+}
