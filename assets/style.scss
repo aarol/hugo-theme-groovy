@@ -7,16 +7,6 @@
 @import "typography.scss";
 @import "shortcode.scss";
 
-
-:root {
-  color-scheme: dark;
-  font-family: "Inter", "Inter-fallback", system-ui, sans-serif;
-
-  --accent: #fabd2f;
-  --accent-darker: #d4a027;
-  --text-color: #e8e8e8;
-}
-
 * {
   box-sizing: border-box;
 }

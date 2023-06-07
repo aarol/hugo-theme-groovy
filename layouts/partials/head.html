@@ -22,4 +22,7 @@
 
 <title>{{ $title }}</title>
 
+{{/* Inject critical css so that the font can be fetched asap */}}
+<style>{{ readFile "assets/critical.css" | safeCSS}}</style>
+
 {{ partial "head-extra.html" . }}
