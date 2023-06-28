@@ -66,6 +66,56 @@ main {
   }
 }
 
+// main page rainbow
+#rainbow {
+  height: 150px;
+  margin: 50px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  #rainbow-border {
+
+    border-radius: 15px;
+    overflow: hidden;
+
+    & div {
+      width: 100%;
+      height: 20px;
+
+      transition: height ease-out;
+
+      transition-duration: 0.5s;
+
+      &.animated {
+        transition-delay: 0s;
+        transition-duration: 0.25s;
+        height: 28px;
+      }
+    }
+  }
+
+  .red {
+    background-color: $color1;
+  }
+
+  .orange {
+    background-color: $color2;
+  }
+
+  .yellow {
+    background-color: $color3;
+  }
+
+  .green {
+    background-color: $color4;
+  }
+
+  .blue {
+    background-color: $color5;
+  }
+}
+
 @supports(font-variation-settings: normal) {
   main a {
     font-variation-settings: 'wght' 400;
