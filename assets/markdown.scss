@@ -1,0 +1,46 @@
+img, svg {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+blockquote {
+  border-left: 5px solid #458588;
+  background-color: #2a2a2a;
+  border-radius: 0 10px 10px 0;
+  padding: 0.5rem 1rem;
+  margin: 2rem 1rem;
+
+  p {
+    margin: 0.5em auto;
+  }
+
+  >blockquote {
+    margin: 0;
+    border-left: 3px solid #ad7d1b
+  }
+}
+
+pre {
+  padding: 15px 10px;
+  margin: 1.5rem 0;
+  overflow: auto;
+  border-radius: 10px;
+  box-shadow: #1b1b1b 1px 1px 5px;
+}
+
+table {
+  background-color: #252525;
+
+  border-collapse: collapse;
+
+  th {
+    background-color: hsl(0, 0%, 20%);
+  }
+
+  th,
+  td {
+    padding: 0.5rem;
+    border: 1px solid hsl(0, 0%, 50%);
+  }
+}

@@ -9,7 +9,7 @@
     <p class="date">
       Published on {{ $date }}
     </p>
-    
+
     {{ with .Page.Lastmod }}
     {{ $lastMod := .Format "02.01.2006" }}
     {{ if ne $date $lastMod }}

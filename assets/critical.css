@@ -28,15 +28,9 @@
   --accent: #fabd2f;
   --accent-darker: #d4a027;
   --text-color: #e8e8e8;
-}
 
-body {
-  font-family: "Inter", "Inter-fallback", system-ui, sans-serif;
-}
-
-code {
-  color: var(--accent);
-  font-family: "JetBrains Mono", ui-monospace,
+  --font-sans-serif: "Inter", "Inter-fallback", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace,
     Menlo, Monaco,
     "Cascadia Mono", "Segoe UI Mono",
     "Roboto Mono",
@@ -46,5 +40,14 @@ code {
     "Fira Mono",
     "Droid Sans Mono",
     "Courier New", monospace;
+}
+
+body {
+  font-family: var(--font-sans-serif);
+}
+
+code {
+  color: var(--accent);
+  font-family: var(--font-mono);
   word-break: break-all;
 }

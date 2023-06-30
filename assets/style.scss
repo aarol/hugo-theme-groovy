@@ -1,7 +1,7 @@
-@import "code.scss";
+@import "markdown.scss";
 @import "header.scss";
 @import "footer.scss";
-@import "posts.scss";
+@import "posts-page.scss";
 @import "syntax.scss";
 @import "projects-page.scss";
 @import "typography.scss";
@@ -19,12 +19,12 @@ body {
 
 .title {
   text-align: center;
-  margin-inline: auto;
+  margin: inherit auto;
 }
 
 main {
   max-width: calc(min(70ch, 90%));
-  margin-inline: auto;
+  margin: 0 auto;
 
   // hide anchors on h1-h4
   h1,
@@ -63,56 +63,6 @@ main {
     margin-top: 3em;
     text-align: end;
     color: #A5A5A5;
-  }
-}
-
-// main page rainbow
-#rainbow {
-  height: 150px;
-  margin: 50px 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-
-  #rainbow-border {
-
-    border-radius: 15px;
-    overflow: hidden;
-
-    & div {
-      width: 100%;
-      height: 20px;
-
-      transition: height ease-out;
-
-      transition-duration: 0.5s;
-
-      &.animated {
-        transition-delay: 0s;
-        transition-duration: 0.25s;
-        height: 28px;
-      }
-    }
-  }
-
-  .red {
-    background-color: $color1;
-  }
-
-  .orange {
-    background-color: $color2;
-  }
-
-  .yellow {
-    background-color: $color3;
-  }
-
-  .green {
-    background-color: $color4;
-  }
-
-  .blue {
-    background-color: $color5;
   }
 }
 

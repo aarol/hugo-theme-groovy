@@ -1,30 +1,7 @@
-img, svg {
-  max-width: 100%;
-  height: auto;
-  border-radius: 10px;
-}
-
 .katex-display {
   padding: 1em 0;
   background-color: #252525;
   border-radius: 10px;
-}
-
-blockquote {
-  border-left: 5px solid #d79921;
-  background-color: #2a2a2a;
-  border-radius: 0 10px 10px 0;
-  padding: 0.5rem 1rem;
-  margin: 2rem 1rem;
-
-  p {
-    margin: 0.5em auto;
-  }
-
-  >blockquote {
-    margin: 0;
-    border-left: 3px solid #ad7d1b
-  }
 }
 
 kbd {
@@ -48,7 +25,7 @@ kbd {
 }
 
 figure {
-  margin-inline: 0;
+  margin: 1em 0;
 
   >p {
     margin-bottom: 0.5em;
@@ -83,4 +60,11 @@ figcaption {
     width: 32px;
     color: white;
   }
+}
+
+.speedcrunch pre {
+  margin: 0;
+  box-shadow: none;
+  padding: 5px;
+  font-family: var(--font-mono);
 }
