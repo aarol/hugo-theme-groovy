@@ -8,7 +8,7 @@ licenselink = "https://github.com/aarol/hugo-theme-groovy/blob/master/LICENSE"
 description = "Simple dark theme for Hugo inspired by the Gruvbox color scheme."
 homepage = "http://github.com/aarol/hugo-theme-groovy/"
 tags = ["blog", "code", "dark", "gruvbox"]
-features = ["syntax higlighting", "image compression", "math", "caption"]
+features = ["syntax higlighting", "image compression", "math", "caption", "opengraph"]
 min_version = "0.80.0"
 
 [author]

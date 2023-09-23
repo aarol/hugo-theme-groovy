@@ -2,23 +2,28 @@
 
 <main>
   <h1 class="title">{{ .Title }}</h1>
-  {{ .Content }}
-
   <div class="dates">
     {{ $date := .Date.Format "02.01.2006" }}
-    <p class="date">
-      Published on {{ $date }}
-    </p>
+    <span class="date">
+      Published {{ $date }}
+    </span>
 
     {{ with .Page.Lastmod }}
     {{ $lastMod := .Format "02.01.2006" }}
     {{ if ne $date $lastMod }}
-    <p class="date">
-      Updated on {{ $lastMod }}
-    </p>
+    <span class="date">
+      • Last modified {{ $lastMod }}
+    </span>
+    {{ end }}
+    {{ end }}
+    {{/* If current post has a lang param, get the LanguageName
+            "fi" -> "Finnish"  
+    */}}
+    {{ range where .Site.Languages "LanguageCode" "eq" .Params.lang }}
+    <p>Language: {{ .LanguageName }}</p>
+    {{ end }}
   </div>
-  {{ end }}
-  {{ end }}
+  {{ .Content }}
 </main>
 
 {{ end }}

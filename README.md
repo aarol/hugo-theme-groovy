@@ -27,6 +27,11 @@ title = '<title>'
 [params]
   subtitle = 'A programming blog/personal site'
 
+[languages]
+[languages.en]
+languageCode="en"
+languageName="English"
+
 [menu]
 [[menu.main]]
   identifier = "about"
