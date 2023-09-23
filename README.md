@@ -6,7 +6,7 @@
 
 The theme is made to be simple and can be extended easily without unnecessary build steps.
 
-This theme requires hugo **extended** 0.80 or higher because it needs Hugo's built in sass compilation and Webp encoding.
+This theme requires hugo **extended** 0.114 or higher because it needs Hugo's built in sass compiler and Webp encoder.
 
 ## Getting started
 
@@ -65,7 +65,10 @@ Then adding images is as simple as copying them to the same directory and linkin
   ```
 - Math rendering using Katex: To enable, use the math parameter in frontmatter.
   ```yaml
+  ---
   math: true
+  ---
   ```
-- Images are automatically optimized to use webp when possible.
+- Images are automatically converted to webp for better compression and displayed when supported by the browser.
 - Caption shortcode to put text below images
+- Automatically generates OpenGraph preview thumbnails

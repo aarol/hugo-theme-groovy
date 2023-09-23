@@ -1,0 +1,45 @@
+{{/* Copied from https://github.com/gohugoio/hugo/blob/a262fd4ddbc27dd867fd14781e8c358e5268cb58/tpl/tplimpl/embedded/templates/opengraph.html */}}
+{{/*  This partial can be overruled by creating *site*/layouts/partials/opengraph.html  */}}
+<meta property="og:title" content="{{ .Title }}" />
+<meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}" />
+<meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}" />
+<meta property="og:url" content="{{ .Permalink }}" />
+
+{{- if .IsPage }}
+{{- $iso8601 := "2006-01-02T15:04:05-07:00" -}}
+<meta property="article:section" content="{{ .Section }}" />
+{{ with .PublishDate }}<meta property="article:published_time" {{ .Format $iso8601 | printf "content=%q" | safeHTMLAttr }} />{{ end }}
+{{ with .Lastmod }}<meta property="article:modified_time" {{ .Format $iso8601 | printf "content=%q" | safeHTMLAttr }} />{{ end }}
+{{- end -}}
+
+{{- with .Params.audio }}<meta property="og:audio" content="{{ . }}" />{{ end }}
+{{- with .Params.locale }}<meta property="og:locale" content="{{ . }}" />{{ end }}
+{{- with .Site.Params.title }}<meta property="og:site_name" content="{{ . }}" />{{ end }}
+{{- with .Params.videos }}{{- range . }}
+<meta property="og:video" content="{{ . | absURL }}" />
+{{ end }}{{ end }}
+
+{{/* Generate opengraph image */}}
+{{- if .IsPage -}}
+  {{ $base := resources.Get "og_base.png" }}
+  {{ $logoFont := resources.Get "/Inter-SemiBold.ttf"}}
+  {{ $titleFont := resources.Get "/Inter-Medium.ttf"}}
+  {{ $img := $base.Filter (images.Text .Site.Title (dict
+    "color" "#ffffff"
+    "size" 52
+    "linespacing" 2
+    "x" 141
+    "y" 117
+    "font" $logoFont
+  ))}}
+  {{ $img = $img.Filter (images.Text .Page.Title (dict
+    "color" "#ffffff"
+    "size" 64
+    "linespacing" 2
+    "x" 141
+    "y" 291
+    "font" $titleFont
+  ))}} 
+  {{ $img = resources.Copy (path.Join .Page.RelPermalink "og.png") $img }}
+  <meta property="og:image" content="{{$img.Permalink}}">
+{{ end }}

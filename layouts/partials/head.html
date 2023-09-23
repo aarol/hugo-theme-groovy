@@ -1,11 +1,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-{{ $desc := .Summary | plainify }}
+{{ $desc := .Summary | plainify | truncate 160 }}
 
 {{ if .IsHome }}{{ $desc = .Site.Params.Subtitle }}{{ end }}
 
 <meta name="description" content="{{ $desc }}">
+<meta name="theme-color" content="#1f1f1f">
 
 {{/* Hugo sass compiler */}}
 {{ $sass := resources.Get "style.scss" }}
@@ -22,7 +23,8 @@
 
 <title>{{ $title }}</title>
 
-{{/* Inject critical css so that the font can be fetched asap */}}
+{{/* Inject critical css so that the font can be fetched as soon as possible */}}
 <style>{{ readFile "assets/critical.css" | safeCSS}}</style>
 
 {{ partial "head-extra.html" . }}
+{{ partial "opengraph.html" . }}
