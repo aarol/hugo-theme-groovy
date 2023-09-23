@@ -43,3 +43,5 @@
   {{ $img = resources.Copy (path.Join .Page.RelPermalink "og.png") $img }}
   <meta property="og:image" content="{{$img.Permalink}}">
 {{ end }}
+
+<meta property="og:locale" content="{{or .Params.lang site.LanguageCode}}">
