@@ -4,5 +4,5 @@ date: {{ .Date }}
 draft: true
 # Enable LaTeX expression rendering
 math: false
-lang: "{{ site.LanguageCode }}"
+locale: "{{ site.LanguageCode }}"
 ---

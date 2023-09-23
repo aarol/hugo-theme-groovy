@@ -19,7 +19,7 @@
     {{/* If current post has a lang param, get the LanguageName
             "fi" -> "Finnish"  
     */}}
-    {{ range where .Site.Languages "LanguageCode" "eq" .Params.lang }}
+    {{ range where .Site.Languages "LanguageCode" "eq" .Params.locale }}
     <p>Language: {{ .LanguageName }}</p>
     {{ end }}
   </div>

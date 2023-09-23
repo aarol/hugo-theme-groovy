@@ -22,15 +22,15 @@
 {{/* Generate opengraph image */}}
 {{- if .IsPage -}}
   {{ $base := resources.Get "og_base.png" }}
-  {{ $logoFont := resources.Get "/Inter-SemiBold.ttf"}}
-  {{ $titleFont := resources.Get "/Inter-Medium.ttf"}}
+  {{ $boldFont := resources.Get "/Inter-SemiBold.ttf"}}
+  {{ $mediumFont := resources.Get "/Inter-Medium.ttf"}}
   {{ $img := $base.Filter (images.Text .Site.Title (dict
     "color" "#ffffff"
     "size" 52
     "linespacing" 2
     "x" 141
     "y" 117
-    "font" $logoFont
+    "font" $boldFont
   ))}}
   {{ $img = $img.Filter (images.Text .Page.Title (dict
     "color" "#ffffff"
@@ -38,10 +38,8 @@
     "linespacing" 2
     "x" 141
     "y" 291
-    "font" $titleFont
+    "font" $mediumFont
   ))}} 
   {{ $img = resources.Copy (path.Join .Page.RelPermalink "og.png") $img }}
-  <meta property="og:image" content="{{$img.Permalink}}">
+  <meta property="og:image" content="{{$img.Permalink}}" />
 {{ end }}
-
-<meta property="og:locale" content="{{or .Params.lang site.LanguageCode}}">
