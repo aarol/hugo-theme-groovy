@@ -49,5 +49,5 @@ body {
 code {
   color: var(--accent);
   font-family: var(--font-mono);
-  word-break: break-all;
+  /* word-break: break-all; */
 }
