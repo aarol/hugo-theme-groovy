@@ -18,6 +18,14 @@
   {{ partial "katex.html" . }}
 {{ end }}
 
+{{/* Mermaid */}}
+{{ if .Store.Get "hasMermaid" }}
+  <script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({ startOnLoad: true, theme: 'dark', darkMode: true });
+  </script>
+{{ end }}
+
 {{ $title := print .Title " - " .Site.Title }}
 {{ if .IsHome }}{{ $title = .Site.Title }}{{ end }}
 
