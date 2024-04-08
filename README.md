@@ -75,5 +75,5 @@ Then adding images is as simple as copying them to the same directory and linkin
   ---
   ```
 - Images are automatically converted to webp for better compression and displayed when supported by the browser.
-- Caption shortcode to put text below images
+- Text in the 'title' section of images is put below the image as a caption.
 - Automatically generates OpenGraph preview thumbnails

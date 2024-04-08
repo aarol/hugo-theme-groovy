@@ -1,0 +1,34 @@
+{{/* Assumes image is located in the same page directory (next to index.md) */}}
+{{ $image := .Page.Resources.Get (.Destination | safeURL) }}
+
+{{ if eq $image nil }}
+  {{ errorf "(%s) Cannot find image %q" .Page.File.Path .Destination }}
+
+{{ else}}
+
+  {{ $image_ext := index (split .Destination "." ) 1 }}
+
+  {{/*  WEBP  */}}
+  {{ if eq $image_ext "webp" }}
+    <img src="{{ .Destination | safeURL}}" alt="{{ .PlainText | safeHTML }}" width="{{ $image.Width }}"
+    height="{{ $image.Height }}">
+
+  {{/*  SVG  */}}
+  {{ else if eq $image_ext "svg" }}
+    {{ $image.Content | safeHTML }}
+
+  {{/*  PNG/JPEG  */}}
+  {{ else }}
+    {{ $webp := $image.Resize (printf "%vx%v webp text q90" $image.Width $image.Height) }}
+    <picture>
+      <source srcset="{{$webp.RelPermalink}}" type="image/webp">
+      <img 
+      src="{{.Destination | safeURL}}"
+      {{- with .Text }} alt="{{ . }}" {{ end -}}
+      {{- with .Title }} title="{{ . }}" {{ end -}}
+      width="{{ $image.Width }}"
+      height="{{ $image.Height }}"
+      >
+    </picture>
+  {{ end }}
+{{ end }}
