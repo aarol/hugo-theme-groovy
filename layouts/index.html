@@ -1,7 +1,6 @@
 {{ define "main" }}
 
 <main>
-
   <div id="rainbow" aria-hidden="true">
     <div id="rainbow-border">
       <div class="red"></div>
@@ -12,46 +11,26 @@
     </div>
   </div>
 
-  <script>
-    const rainbow = document.getElementById("rainbow-border")
-    for (const el of rainbow.children) {
-      const func = () => {
-        el.classList.add("animated")
-        setTimeout(() => { el.classList.remove("animated") }, 350)
-      }
-      el.addEventListener("pointermove", func)
-      el.addEventListener("touchmove", func)
-    }
-  </script>
-
   <h1 class="title">Recent posts</h1>
 
   <div class="year-list">
-
     {{ $pages := where .Site.RegularPages "Type" "posts" }}
 
     {{ range $pages.GroupByDate "2006" }}
-
-    <h1>{{ .Key }}</h1>
-
-    <ul class="posts-list">
-      {{ range .Pages }}
-
-      <li class="posts-list-item">
-        <a href="{{.Permalink}}">
-          {{ .Title }}
-        </a>
-        <span>
-          {{ .Date.Format "January 2" }}
-        </span>
-      </li>
-
-      {{ end }}
-    </ul>
-
+      <h1>{{ .Key }}</h1>
+    
+      <ul class="posts-list">
+        {{ range .Pages }}
+      
+        <li class="posts-list-item">
+          <a href="{{.Permalink}}"> {{ .Title }} </a>
+          <span> {{ .Date.Format "January 2" }} </span>
+        </li>
+      
+        {{ end }}
+      </ul>
 
     {{ end }}
   </div>
-
 </main>
 {{ end }}
