@@ -8,8 +8,8 @@
 
   {{ $image_ext := index (split .Destination "." ) 1 }}
 
-  {{/*  WEBP  */}}
-  {{ if eq $image_ext "webp" }}
+  {{/*  WEBP, GIF  */}}
+  {{ if in (slice "webp" "gif") $image_ext }}
     <img src="{{ .Destination | safeURL}}" alt="{{ .PlainText | safeHTML }}" width="{{ $image.Width }}"
     height="{{ $image.Height }}">
 
