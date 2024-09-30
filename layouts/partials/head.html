@@ -10,7 +10,7 @@
 
 {{/* Compile Sass into CSS using the embedded Sass compiler in hugo-extended */}}
 {{ $sass := resources.Get "style.scss" }}
-{{ $style := $sass | resources.ToCSS | minify }}
+{{ $style := $sass | css.Sass | minify }}
 {{/*  Since the CSS is only ~3kB, we can inline it */}}
 <style>{{ $style.Content | safeCSS }}</style>
 

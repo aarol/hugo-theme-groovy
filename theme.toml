@@ -9,7 +9,7 @@ description = "Simple dark theme for Hugo inspired by the Gruvbox color scheme."
 homepage = "http://github.com/aarol/hugo-theme-groovy/"
 tags = ["blog", "code", "dark", "gruvbox"]
 features = ["syntax higlighting", "image compression", "webp", "responsive", "math", "opengraph", "mermaid"]
-min_version = "0.124.0"
+min_version = "0.128.0"
 
 [author]
   name = "aarol"
