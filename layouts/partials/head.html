@@ -8,6 +8,11 @@
 <meta name="description" content="{{ $desc }}">
 <meta name="theme-color" content="#1f1f1f">
 
+{{/*  RSS Feed  */}}
+{{ with .OutputFormats.Get "rss" -}}
+  {{ printf `<link rel=%q type=%q href=%q title=%q>` .Rel .MediaType.Type .Permalink site.Title | safeHTML }}
+{{ end }}
+
 {{/* Compile Sass into CSS using the embedded Sass compiler in hugo-extended */}}
 {{ $sass := resources.Get "style.scss" }}
 {{ $style := $sass | css.Sass | minify }}
