@@ -1,3 +1,10 @@
+.intro-text {
+  &::first-line {
+    font-size: 1.4em;
+  }
+  font-size: 1.2em;
+}
+
 .year-list {
   padding: 0;
 

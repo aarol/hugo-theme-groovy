@@ -1,14 +1,19 @@
 {{ define "main" }}
 
 <main>
-  <h1 class="title">Recent posts</h1>
+
+  <div class="intro-text">
+    {{ .Content }}
+  </div>
+
+  <h1 class="title">All blog posts</h1>
 
   <div class="year-list">
     {{ $pages := where .Site.RegularPages "Type" "posts" }}
 
     {{ range $pages.GroupByDate "2006" }}
       <h1>{{ .Key }}</h1>
-    
+
       <ul class="posts-list">
         {{ range .Pages }}
       
