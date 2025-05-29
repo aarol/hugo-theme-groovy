@@ -37,14 +37,17 @@
   justify-content: space-between;
 
   .gh-logo {
-    width: 30px;
-    height: 30px;
+    width: 40px;
+    height: 40px;
     color: white;
-    transition: transform 0.25s ease;
-    margin: 1em;
+    display: grid;
+    place-items: center end;
+    >svg {
+      transition: transform 0.25s ease;
 
-    &:hover {
-      transform: scale(1.1);
+      &:hover {
+        transform: scale(1.1);
+      }
     }
   }
 }
