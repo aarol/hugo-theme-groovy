@@ -1,8 +1,8 @@
 .intro-text {
-  &::first-line {
-    font-size: 1.4em;
+  >p:first-child {
+    font-size: 1.2em;
   }
-  font-size: 1.2em;
+  font-size: 1.0em;
 }
 
 .year-list {
