@@ -1,10 +1,12 @@
-img, svg {
+img,
+svg {
   max-width: 100%;
   height: auto;
   border-radius: 10px;
 }
 
-blockquote, details {
+blockquote,
+details {
   border-left: 5px solid #458588;
   background-color: #2a2a2a;
   border-radius: 0 10px 10px 0;
@@ -27,6 +29,20 @@ pre {
   overflow: auto;
   border-radius: 10px;
   box-shadow: #1b1b1b 1px 1px 5px;
+}
+
+pre::-webkit-scrollbar {
+  height: 10px;
+}
+
+pre::-webkit-scrollbar-track {
+  background: #222;
+  border-radius: 10px 10px 10px 10px;
+}
+
+pre::-webkit-scrollbar-thumb {
+  background: #444;
+  border-radius: 10px 10px 10px 10px;
 }
 
 table {
