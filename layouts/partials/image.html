@@ -17,6 +17,9 @@
   {{ else if eq $image_ext "svg" }}
     {{ $image.Content | safeHTML }}
 
+  {{/* MP4 */}}
+  {{ else if eq $image_ext "mp4" }}
+    <video controls src="{{ .Destination | safeURL}}" alt="{{ .PlainText | safeHTML }}">
   {{/*  PDF  */}}
   {{ else if eq $image_ext "pdf" }}
 
