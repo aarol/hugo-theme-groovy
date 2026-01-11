@@ -29,7 +29,7 @@ pre {
   overflow: auto;
   border-radius: 10px;
   box-shadow: #1b1b1b 1px 1px 5px;
-  font-family: var(--font-mono);
+  // font-family: var(--font-mono);
 }
 
 pre::-webkit-scrollbar {
@@ -60,4 +60,8 @@ table {
     padding: 0.5rem;
     border: 1px solid hsl(0, 0%, 50%);
   }
+}
+
+video {
+  max-width: 100%;
 }
