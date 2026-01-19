@@ -6,7 +6,12 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-family: "JetBrains Mono", monospace;
+  font-family: var(--font-sans-serif);
+
+  --logo-weight-normal: 500;
+  --logo-weight-bold: 700;
+  --nav-weight-normal: 400;
+  --nav-weight-bold: 600;
 }
 
 .logo {
@@ -14,7 +19,7 @@ header {
   flex-direction: column;
   padding: 0.4em;
   color: #fff;
-  font-weight: 600;
+  font-weight: var(--logo-weight-normal);
   font-size: 1.5rem;
   text-decoration: none;
   border-radius: 10px;
@@ -39,28 +44,28 @@ nav {
 
     &:hover {
       background-color: #2a2a2ac1;
-      font-weight: 700;
+      font-weight: var(--nav-weight-bold);
     }
   }
 }
 
 @supports(font-variation-settings: normal) {
   nav a {
-    font-variation-settings: 'wght' 400;
+    font-variation-settings: 'wght' var(--nav-weight-normal);
     transition: font-variation-settings 0.2s ease;
 
     &:hover,
     &.active {
-      font-variation-settings: "wght" 800;
+      font-variation-settings: "wght" var(--nav-weight-bold);
     }
   }
 
   .logo {
-    font-variation-settings: 'wght' 600;
+    font-variation-settings: 'wght' var(--logo-weight-normal);
     transition: font-variation-settings 0.2s ease;
 
     &:hover {
-      font-variation-settings: "wght" 800;
+      font-variation-settings: "wght" var(--logo-weight-bold);
     }
   }
 }
