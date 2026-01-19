@@ -18,7 +18,7 @@
         {{ range .Pages }}
       
         <li class="posts-list-item">
-          <a href="{{.Permalink}}" style="view-transition-name: post-title-{{ .File.ContentBaseName }}"> {{ .Title }} </a>
+          <a href="{{.Permalink}}" style="view-transition-name: post-title-{{ replace .File.ContentBaseName "." "-" }}"> {{ .Title }} </a>
           <span> {{ .Date.Format "January 2" }} </span>
         </li>
       
