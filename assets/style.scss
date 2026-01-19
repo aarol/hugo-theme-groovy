@@ -128,3 +128,19 @@ main {
     animation-duration: 0s !important;
   }
 }
+
+/* View Transitions */
+@view-transition {
+  navigation: auto;
+}
+
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 0.3s;
+}
+
+/* Post title transitions - smoother movement */
+::view-transition-group(*) {
+  animation-duration: 0.4s;
+  animation-timing-function: ease-in-out;
+}
