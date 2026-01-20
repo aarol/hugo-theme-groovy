@@ -1,7 +1,7 @@
 {{ define "main" }}
 
 <main>
-  <h1 class="title" style="view-transition-name: post-title-{{ replace .File.ContentBaseName "." "-" }}">{{ .Title }}</h1>
+  <h1 class="title" style="view-transition-name: post-title-{{ .RelPermalink | anchorize }}">{{ .Title }}</h1>
   <div class="dates">
     {{ with .Page.Draft }}
       <span class="red">Draft</span>
